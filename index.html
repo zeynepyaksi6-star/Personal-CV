@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeynep Itır Yakşi - CV</title>
+    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Poppins:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Sitenin geneli için arka plan ve genel yazı tipi (Poppins) */
+        /* İletişim butonlarını alt alta dizen yeni ayarumuz */
+        .contact-links {
+            display: flex;
+            flex-direction: column; /* Butonları yan yana değil, alt alta (sütun şeklinde) dizer */
+            gap: 12px; /* Butonların arasındaki dikey boşluk */
+            max-width: 350px; /* Butonların sayfayı tamamen kaplayıp çok uzamaması için genişlik sınırı */
+        }
+        /* Her bir iletişim butonunun yeni gradient tasarımı */
+        .contact-item {
+            display: inline-block;
+            text-decoration: none;
+            
+            /* --- SİBER GRADIENT BUTON AYARI --- */
+            /* Soldan sağa koyu maviden tatlı bir mora doğru akan geçiş */
+            background: linear-gradient(to right, #1e3c72 0%, #2a5298 50%, #7028b0 100%);
+            background-size: 200% auto; /* Animasyon efekti için arka planı genişlettik */
+            color: #ffffff; /* Yazıları beyaz yaptık ki koyu renkte okunsun */
+            
+            padding: 11px 24px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.4s ease; /* Geçiş efektinin süresi */
+            border: none; /* Çerçeveye gerek kalmadı */
+            box-shadow: 0 4px 15px rgba(30, 60, 114, 0.2);
+        }
+
+        /* Fareyle butonun üzerine gelindiğinde (Hover durumu) */
+        .contact-item:hover {
+            /* Renklerin butonun üzerinde canlı gibi sağa doğru kaymasını sağlar */
+            background-position: right center; 
+            transform: translateY(-3px); /* Butonu hafifçe yukarı zıplatır */
+            box-shadow: 0 6px 20px rgba(112, 40, 176, 0.4); /* Mor ağırlıklı parlama efekti */
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            
+            color: #2b2a2a;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+            background-image: url('photo.png.avif'); /* Klasördeki resmin adı */
+            background-size: cover;               /* Resmi ekrana sığdırmak için esnetir/kaplar */
+            background-position: center;          /* Resmi ekranda tam ortalar */
+            background-repeat: no-repeat;         /* Ekran büyükse resmin kendini tekrar etmesini önler */
+            background-attachment: fixed;
+        }
+
+        /* Tüm içeriği ortalayan beyaz şık kutu */
+        /* Tüm içeriği ortalayan şık geçişli kutu */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            
+            /* --- YENİ GRADIENT VE ARKA PLAN AYARI --- */
+            /* Sol üstten sağ alta doğru beyazdan çok hafif mavi/mora geçen asil bir gradient */
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 244, 248, 0.95) 100%);
+            
+            padding: 40px;
+            border-radius: 16px; /* Köşeleri biraz daha yumuşattık */
+            
+            /* Kutunun etrafına çok hafif parıltılı bir çerçeve ve derinlik gölgesi */
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Üst/* Profil Resmi Tasarımı */
+        /* Profil Resmi Tasarımı ve Kusursuz Ortalama */
+        .profile-img {
+            width: 100px;       /* Fotoğrafın genişliği */
+            height: 100px;      /* Fotoğrafın yüksekliği */
+            border-radius: 50%; /* Kare fotoğrafı tam bir daire yapar */
+            object-fit: cover;  /* Fotoğrafın oranını bozmadan kutuya sığdırır */
+            border: 4px solid #091e42; /* Şık mavi çerçeve */
+            margin-bottom: 15px; /* Altındaki adın ile arasındaki boşluk */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+            
+            /* Fotoğrafı yatayda tam ortalayan sihirli satırlar: */
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #918e8e;
+            padding-bottom: 20px;
+        }
+
+        /* Sadece adının yazdığı kısım için özel el yazısı (Alex Brush) ayarı */
+      /* Sadece en üstteki adının yazdığı ana başlık (H1) ayarları */
+       /* Sadece en üstteki adının yazdığı ana başlık (H1) ayarları */
+        header h1 {
+            font-family: 'DM Mono', monospace; /* Monospace kod fontumuz aktif oldu */
+            font-size: 3rem; /* Boyut ayarı */
+            margin: 15px 0 0 0;
+            color: #1a365d; /* Profesyonel koyu lacivert */
+            font-weight: 500; /* Net ve temiz bir duruş için */
+            letter-spacing: -1px; /* Monospace fontlarda harfleri birbirine biraz yaklaştırmak çok şık durur */
+        }
+        /* Adının altındaki unvan yazısı */
+        header p {
+            margin: 5px 0 0 0;
+            color: #1e2531;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        /* Bölümler arası boşluklar */
+        section {
+            margin-bottom: 35px;
+        }
+
+        /* Hakkımda, Eğitim, Projeler gibi alt başlıkların stili */
+        h2 {
+            
+            color: #091e42;
+            font-size: 1.2rem;
+            border-left: 4px solid #091e42;
+            padding-left: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* Listelerin başındaki noktaları kaldırma ve düzenleme */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        /* Liste maddelerinin kutu şeklinde şık görünmesi */
+       /* Liste maddelerinin (kutucukların) tasarımı ve çerçevelenmesi */
+        li {
+            background: rgba(223, 239, 248, 0.9); /* Arka plan resminin üstünde yazılar okunsun diye %90 opak beyazlık */
+            margin-bottom: 15px;
+            padding: 20px;
+            border-radius: 10px; /* Kutunun köşelerini yumuşatır */
+            font-weight: 500;
+            /* --- YENİ ÇERCEVE AYARLARI --- */
+            border: 4px solid #091e42; /* 2 piksel kalınlığında, düz (solid) ve mavi renkli çerçeve */
+            
+            transition: all 0.3s ease; /* Fareyle üzerine gelince olacak değişimin hızı */
+        }
+
+        /* Fareyle kutucuğun üzerine gelince (Hover durumu) */
+        li:hover {
+            transform: translateY(-3px); /* Kutuyu hafifçe yukarı kaldırır */
+            border-color: #1a365d; /* Çerçevenin rengini koyu laciverte dönüştürür */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Kutunun altına şık bir gölge atar */
+        }
+
+        strong {
+            color: #24282f;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+       <header>
+            <img src="profil.png.webp" alt="Zeynep Itır Yakşi Profil Fotoğrafı" class="profile-img">
+            
+            <h1>Zeynep Itır Yakşi</h1>
+            <p>Computer Engineering Student</p>
+        </header>
+
+        <!-- Özet Bilgi -->
+        <section>
+            <h2>PROFILE</h2>
+            <p>Computer Engineering student seeking internship 
+                opportunities to gain hands-on experience and 
+                further develop professional skills. Possesses intermediate-
+                level knowledge of C, C#, and Python. Has a strong interest in 
+                technology and continuous learning. A highly motivated, 
+                fast learner and team-oriented individual, 
+                eager to apply both theoretical and 
+                practical knowledge in real-world projects while improving problem-solving skills.</p>
+        </section>
+
+        <!-- Eğitim Bilgileri -->
+        <section>
+            <h2>EDUCATIONS</h2>
+            <ul>
+                <li><strong>High School:</strong> İbrahim Önal Fen Lisesi</li>
+                <li><strong>University:</strong> Çanakkale Onsekiz Mart University Computer Engineering(GANO:2.5)</li>
+            </ul>
+        </section>
+
+        <!-- Yetkinlikler -->
+        <section>
+            <h2>SKILLS</h2>
+            <ul>
+                <li><strong>C Programming</li>
+                <li><strong>C# Programming</li>
+                <li><strong>Python Programming</li>
+                <li><strong>Knowledge of Unity Engine</li>
+                <li><strong>Large Language Model Operations</li>      
+            </ul>
+        </section>
+
+       
+    <section>
+            <h2>LANGUAGES</h2>
+            <ul>
+                <li><strong>B1 English</li>
+                     
+            </ul>
+        </section>
+
+     <footer>
+            <h2>COMMUNICATE</h2>
+            <div class="contact-links">
+                <a href="mailto:zeynepyaksi6@gmail.com" class="contact-item">📧 zeynepyaksi6@gmail.com</a>
+                <a href="tel:+905468517285" class="contact-item">📞 0546 851 72 85</a>
+                <a href="https://www.linkedin.com/in/zeynep-it%C4%B1r-yak%C5%9Fi-393765335/" target="_blank" class="contact-item">💼 LinkedIn</a>
+                <a href="https://github.com/zeynepyaksi6-star" target="_blank" class="contact-item">🐙 GitHub</a>
+            </div>
+        </footer>
+
+</body>
+</html>
